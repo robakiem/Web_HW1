@@ -1,16 +1,86 @@
 <!DOCTYPE html>
-<html>
-<head lang="uk">
-    <meta charset="UTF-8">
-    <title>My Page</title>
+<html lang="uk">
 
-
-    <link rel="stylesheet" type="text/css" href="main.css" />
+<head>
+	<meta charset="UTF-8">
+	<title>Мій кошик</title>
+	
+	<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
+
 <body>
-	<span class="product-item">
-		Apple
-		<span class="amount">4</span>
-	</span>
+	<div class="container">
+		<main class="product-picker">
+			<form class="adder">
+				<input type="text" class="add-input" placeholder="Назва товару">
+				<button type="submit" class="add-button" data-tooltip="До списку">Додати</button>
+			</form>
+			<ul class="product-list">
+				<li class="product">
+					<div class="name-crossed" contenteditable="false">Помідори</div>
+					<div class="number">
+						<button class="num">2</button>
+					</div>
+					<div class="status">
+						<button class="bought bought-status" data-tooltip="Товар не куплено">Не куплено</button>
+					</div>
+				</li>
+				<li class="product">
+					<input type="text" class="name" value="Печиво">
+					<div class="buttons">
+						<button class="change-quantity minus" data-tooltip="Зменшити кількість">-</button>
+						<button class="num">2</button>
+						<button class="change-quantity plus" data-tooltip="Збільшити кількість">+</button>
+					</div>
+					<div class="status">
+						<button class="bought bought-status" data-tooltip="Товар куплено">Куплено</button>
+						<button class="remove" data-tooltip="Прибрати товар">x</button>
+					</div>
+				</li>
+				<li class="product">
+					<input type="text" class="name" value="Сир">
+					<div class="buttons">
+						<button class="change-quantity minus-faint" data-tooltip="Зменшити кількість">-</button>
+						<button class="num">1</button>
+						<button class="change-quantity plus" data-tooltip="Збільшити кількість">+</button>
+					</div>
+					<div class="status">
+						<button class="bought bought-status" data-tooltip="Товар куплено">Куплено</button>
+						<button class="remove" data-tooltip="Прибрати товар">x</button>
+					</div>
+				</li>
+			</ul>
+		</main>
+		<aside class="summary">
+			<header class="summary-header1">
+				<h2>Залишилося</h2>
+			</header>
+			<div class="remaining">
+				<span class="product-item">
+					Печиво
+					<span class="amount">2</span>
+				</span>
+				<span class="product-item">
+					Сир
+					<span class="amount">1</span>
+				</span>
+			</div>
+			<header class="summary-header">
+				<h2>Куплено</h2>
+			</header>
+			<div class="purchased">
+				<div class="product-item">Помідори <span class="amount">2</span></div>
+			</div>
+		</aside>
+	</div>
+	<footer>
+		<span class="badge">
+			<b class="buylist">Buy List</b>
+			<p class="created">Created by:</p>
+			<b class="author">Bahriantsev</b>
+			<b class="author">Ivan</b>
+		</span>
+	</footer>
 </body>
+
 </html>
