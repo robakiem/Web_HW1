@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Мій кошик</title>
-	
+	<script src="script.js" defer></script>
 	<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
@@ -16,13 +16,16 @@
 				<button type="submit" class="add-button" data-tooltip="До списку">Додати</button>
 			</form>
 			<ul class="product-list">
-				<li class="product">
-					<div class="name-crossed" contenteditable="false">Помідори</div>
-					<div class="number">
+				<!-- <li class="product">
+					<input type="text" class="name" value="Помідори">
+					<div class="buttons">
+						<button class="change-quantity minus" data-tooltip="Зменшити кількість">-</button>
 						<button class="num">2</button>
+						<button class="change-quantity plus" data-tooltip="Збільшити кількість">+</button>
 					</div>
 					<div class="status">
 						<button class="bought bought-status" data-tooltip="Товар не куплено">Не куплено</button>
+						
 					</div>
 				</li>
 				<li class="product">
@@ -48,7 +51,7 @@
 						<button class="bought bought-status" data-tooltip="Товар куплено">Куплено</button>
 						<button class="remove" data-tooltip="Прибрати товар">x</button>
 					</div>
-				</li>
+				</li> -->
 			</ul>
 		</main>
 		<aside class="summary">

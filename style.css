@@ -105,7 +105,7 @@ body {
     border-bottom: none;
 }
 
-.name-crossed, .name, .name-input {
+.name-crossed, .name-display, .name-input {
     flex: 1;
     font-size: 16px;
 }
@@ -114,13 +114,39 @@ body {
     text-decoration: line-through;
 }
 
+.name-display {
+    cursor: pointer;
+}
+
+.product.bought .name-display {
+    text-decoration: line-through;
+    cursor: default;
+}
+
+.name-input {
+    display: none;
+}
+
+.product.editing .name-display {
+    display: none;
+}
+
+.product.editing .name-input {
+    display: block;
+}
+
+.product.bought .change-quantity,
+.product.bought .remove {
+    display: none;
+}
+
 .status {
-	min-width: none;
+	min-width: 114px;
     display: flex;
     align-items: center;
 }
 
-.change-quantity, .num, .bought, .remove {
+.change-quantity, .num, .bought-status, .remove {
     background-color: lightgray;
     border: none;
     border-radius: 4px;
@@ -165,6 +191,7 @@ body {
 }
 
 .bought-status {
+    margin-left: auto;
     background-color: #f4f4f4;
     color: #6C6C6C;
     border: 1px solid #cfcfd0;
@@ -432,7 +459,7 @@ footer:hover {
 }
 
 
-.name {
+.name-input {
     width: auto;
     min-width: 0;
     border: none; 
@@ -444,7 +471,7 @@ footer:hover {
     -moz-box-sizing: content-box;
 }
 
-.name:focus{
+.name-input:focus{
 	border: 1px solid #5ea9e2;
 	box-shadow: 3px 3px 6px #bddcf4;
 	outline: none;
